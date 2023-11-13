@@ -1,6 +1,6 @@
 # Game-Character-Creator
 
-There will be soon a part of code of my game that is responsible for creating game main character's look. User can choose his sex, skin, hair (haircut type and color), pants, longsleeve/shortsleeve, shoes.
+A piece of code that is responsible for creating game main character's look. User can choose his sex, skin, hair (haircut type and color), pants, longsleeve/shortsleeve, shoes.
 
 It is based on <ins>MVP</ins> architectural pattern and uses <ins>decorator</ins> structural pattern.
 
