@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#8DB255"
+    tools:ignore="HardcodedText"
+    tools:context="pl.jawegiel.charactercreator.activities.ActivityCharacterCreator">
+
+    <pl.jawegiel.charactercreator.views.CharacterCreatorBgView
+        android:id="@+id/character_creator_bg_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:paddingBottom="20dp"
+        android:text="Customize your character."
+        android:textColor="#fff"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/sw_sex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_activity_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:contentDescription="switch"
+        android:labelFor="@id/sw_sex"
+        android:textOff="man"
+        android:textOn="woman"
+        android:thumb="@drawable/pink_out_line"
+        app:showText="true"
+        app:track="@drawable/custom_track" />
+
+    <Button
+        android:id="@+id/b_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/sw_sex"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:text="reset"
+        tools:ignore="ButtonStyle" />
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/b_reset"
+        app:layout_constraintBottom_toTopOf="@id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:fadeScrollbars="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+            <TextView
+                android:id="@+id/tv_element_skin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="white"
+                android:layout_centerHorizontal="true" />
+
+            <LinearLayout
+                android:id="@+id/ll_skin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_element_skin"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b_previous_skin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="previous"
+                    tools:ignore="ButtonStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:text="skin"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_next_skin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:padding="10dp"
+                    android:text="next"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_element_hair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_skin"
+                android:layout_centerHorizontal="true"
+                android:text="no hair" />
+
+            <LinearLayout
+                android:id="@+id/ll_hair"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_element_hair"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b_previous_hair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="previous"
+                    tools:ignore="ButtonStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:text="hair"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_next_hair"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:padding="10dp"
+                    android:text="next"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_element_pants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_hair"
+                android:layout_centerHorizontal="true"
+                android:text="no pants" />
+
+            <LinearLayout
+                android:id="@+id/ll_pants"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_element_pants"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b_previous_pants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="previous"
+                    tools:ignore="ButtonStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:text="pants"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_next_pants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:padding="10dp"
+                    android:text="next"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_element_longsleeve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_pants"
+                android:layout_centerHorizontal="true"
+                android:text="no longsleeve" />
+
+            <LinearLayout
+                android:id="@+id/ll_longsleeve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_element_longsleeve"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b_previous_longsleeve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="previous"
+                    tools:ignore="ButtonStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:text="longsleeve"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_next_longsleeve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:padding="10dp"
+                    android:text="next"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_element_shortsleeve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_longsleeve"
+                android:layout_centerHorizontal="true"
+                android:text="no shortsleeve" />
+
+            <LinearLayout
+                android:id="@+id/ll_shortsleeve"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_element_shortsleeve"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b_previous_shortsleeve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="previous"
+                    tools:ignore="ButtonStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:text="shortsleeve"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_next_shortsleeve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:padding="10dp"
+                    android:text="next"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_element_shoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_shortsleeve"
+                android:layout_centerHorizontal="true"
+                android:text="no shoes" />
+
+            <LinearLayout
+                android:id="@+id/ll_shoes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_element_shoes"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/b_previous_shoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:enabled="false"
+                    android:padding="10dp"
+                    android:text="previous"
+                    tools:ignore="ButtonStyle" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="5dp"
+                    android:text="shoes"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/b_next_shoes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:padding="10dp"
+                    android:text="next"
+                    tools:ignore="ButtonStyle" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/b_randomize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:padding="10dp"
+        android:text="random"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scrollview"
+        tools:ignore="ButtonStyle" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gif_randomize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp"
+        android:background="@drawable/dices"
+        android:padding="10dp"
+        android:text="random"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/b_randomize"
+        tools:ignore="ButtonStyle" />
+
+
+    <pl.jawegiel.charactercreator.views.CharacterCreatorView
+        android:id="@+id/character_creator_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/pb"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_arrows_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="30dp"
+        android:src="@mipmap/arrows_right"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

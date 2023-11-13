@@ -1,0 +1,3 @@
+-keepattributes SourceFile, LineNumberTable
+-keepattributes LocalVariableTable, LocalVariableTypeTable
+-keepattributes *Annotation*, LineNumberTable, Signature, Exceptions
