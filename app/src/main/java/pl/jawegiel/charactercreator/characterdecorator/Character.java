@@ -18,7 +18,7 @@ public abstract class Character {
     Bitmap bitmapBase;
     Bitmap bitmapFinal;
     SpriteElement baseSpriteElement;
-    Map<SpriteElement, DecoratorItem> decorationsMap = new HashMap<>();
+    Map<SpriteElement, DecoratorItem> decorationsMap = new LinkedHashMap<>();
     CharacterDecorator skin;
     Context context;
     SharedPreferences sp;

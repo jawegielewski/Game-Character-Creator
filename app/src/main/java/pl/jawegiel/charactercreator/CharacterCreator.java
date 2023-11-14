@@ -5,13 +5,15 @@ import android.graphics.Canvas;
 
 public class CharacterCreator {
 
+    public static final int COL_COUNT = 13;
+    public static final int ROW_COUNT = 21;
+
     private static final int ROW_BOTTOM_TO_TOP = 8;
     private static final int ROW_RIGHT_TO_LEFT = 9;
     private static final int ROW_TOP_TO_BOTTOM = 10;
     private static final int ROW_LEFT_TO_RIGHT = 11;
 
-    private static final int COL_COUNT = 13;
-    private static final int ROW_COUNT = 21;
+
 
     private final Bitmap[] leftToRights;
     private final Bitmap[] rightToLefts;
@@ -40,7 +42,7 @@ public class CharacterCreator {
         this.leftToRights = new Bitmap[COL_COUNT];
         this.bottomToTops = new Bitmap[COL_COUNT];
 
-        createMovementAnimationOrStay(COL_COUNT);
+        createBitmapFrames(COL_COUNT);
 
         imageResized = Bitmap.createScaledBitmap(getMoveBitmaps()[0], 300, 300, false);
     }
@@ -55,33 +57,12 @@ public class CharacterCreator {
         this.heightOneFrame = this.heightAllRows / ROW_COUNT;
     }
 
-    public void createMovementAnimationOrStay(int colCount) {
+    public void createBitmapFrames(int colCount) {
         for (int col = 0; col < colCount; col++) {
             this.topToBottoms[col] = this.createSubImageAt(ROW_TOP_TO_BOTTOM, col);
             this.rightToLefts[col] = this.createSubImageAt(ROW_RIGHT_TO_LEFT, col);
             this.leftToRights[col] = this.createSubImageAt(ROW_LEFT_TO_RIGHT, col);
             this.bottomToTops[col] = this.createSubImageAt(ROW_BOTTOM_TO_TOP, col);
-        }
-    }
-
-    public void createMovementAnimationOrStay2(int colCount) {
-        if (roundDirection == 0) {
-            for (int col = 0; col < colCount; col++) {
-                this.topToBottoms[col] = this.createSubImageAt(ROW_TOP_TO_BOTTOM, col);
-            }
-
-        } else if (roundDirection == 1) {
-            for (int col = 0; col < colCount; col++) {
-                this.rightToLefts[col] = this.createSubImageAt(ROW_RIGHT_TO_LEFT, col);
-            }
-        } else if (roundDirection == 2) {
-            for (int col = 0; col < colCount; col++) {
-                this.bottomToTops[col] = this.createSubImageAt(ROW_BOTTOM_TO_TOP, col);
-            }
-        } else if (roundDirection == 3) {
-            for (int col = 0; col < colCount; col++) {
-                this.leftToRights[col] = this.createSubImageAt(ROW_LEFT_TO_RIGHT, col);
-            }
         }
     }
 
@@ -92,7 +73,6 @@ public class CharacterCreator {
     }
 
     public void update() {
-        createMovementAnimationOrStay2(COL_COUNT);
         if (roundDirection == 0) {
             this.rowUsing = ROW_TOP_TO_BOTTOM;
         } else if (roundDirection == 1) {

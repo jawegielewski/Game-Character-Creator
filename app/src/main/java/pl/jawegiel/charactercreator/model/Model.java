@@ -124,7 +124,10 @@ public class Model implements Contract.IModel, Contract.IModel.IModelFieldsHolde
 
     @Override
     public void init(Context context, IOnAdditiveAdded onAdditiveAdded) {
-        character = new BaseCharacter(context, () -> characterCreator.modifySprite(character.getBitmapFinal()), onAdditiveAdded);
+        character = new BaseCharacter(context, () -> {
+            characterCreator.modifySprite(character.getBitmapFinal());
+            characterCreator.createBitmapFrames(CharacterCreator.COL_COUNT);
+        }, onAdditiveAdded);
         prepareElementsList();
     }
 
