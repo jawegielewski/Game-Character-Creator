@@ -3,6 +3,9 @@ package pl.jawegiel.charactercreator;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 
+import lombok.Getter;
+
+@Getter
 public class CharacterCreator {
 
     public static final int COL_COUNT = 13;
@@ -13,20 +16,18 @@ public class CharacterCreator {
     private static final int ROW_TOP_TO_BOTTOM = 10;
     private static final int ROW_LEFT_TO_RIGHT = 11;
 
-
-
     private final Bitmap[] leftToRights;
     private final Bitmap[] rightToLefts;
     private final Bitmap[] topToBottoms;
     private final Bitmap[] bottomToTops;
     private int widthOneFrame, heightOneFrame;
     private Bitmap image;
-    public Bitmap imageResized;
+    private Bitmap imageResized;
     private int rowUsing = 10;
-    public int colUsing = 0;
+    private int colUsing = 0;
     private int widthAllCols;
     private int heightAllRows;
-    public int roundDirection;
+    private int roundDirection;
 
     public CharacterCreator(Bitmap baseSprite) {
         this.image = baseSprite;

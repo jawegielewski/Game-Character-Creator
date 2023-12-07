@@ -53,8 +53,8 @@ public class CharacterCreatorView extends View implements IOnCharacterCreatorThr
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        super.onMeasure(MeasureSpec.makeMeasureSpec(characterCreator.imageResized.getWidth(), MeasureSpec.EXACTLY),
-            MeasureSpec.makeMeasureSpec(characterCreator.imageResized.getHeight(), MeasureSpec.EXACTLY));
+        super.onMeasure(MeasureSpec.makeMeasureSpec(characterCreator.getImageResized().getWidth(), MeasureSpec.EXACTLY),
+            MeasureSpec.makeMeasureSpec(characterCreator.getImageResized().getHeight(), MeasureSpec.EXACTLY));
     }
 
     @Override

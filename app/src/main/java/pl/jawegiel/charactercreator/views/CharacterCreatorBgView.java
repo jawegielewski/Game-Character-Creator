@@ -81,26 +81,26 @@ public class CharacterCreatorBgView extends View implements IOnCharacterCreatorT
 
         if (characterCreator != null) {
 
-            if (characterCreator.roundDirection == 1) {
+            if (characterCreator.getRoundDirection() == 1) {
                 grassX += 4;
                 if (grassX < -newWidth) {
                     grassX = 0;
                 }
             }
-            if (characterCreator.roundDirection == 2) {
+            if (characterCreator.getRoundDirection() == 2) {
                 grassY += 1;
                 if (grassY < -newHeight) {
                     grassY = 0;
                 }
                 mountainsCloserY += 1;
             }
-            if (characterCreator.roundDirection == 3) {
+            if (characterCreator.getRoundDirection() == 3) {
                 grassX -= 4;
                 if (grassX < -newWidth) {
                     grassX = 0;
                 }
             }
-            if (characterCreator.roundDirection == 0) {
+            if (characterCreator.getRoundDirection() == 0) {
                 grassY -= 1;
                 if (grassY < -newHeight) {
                     grassY = 0;
