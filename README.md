@@ -29,33 +29,34 @@ protected void onCreate(Bundle savedInstanceState) {
     ActivityCharacterCreator.setOnNextPressed(Util::showInfoAlertDialog);
     Intent characterCreatorIntent = new Intent(ActivityMain.this, ActivityCharacterCreator.class);
     startActivity(characterCreatorIntent);
+}
 ```
 ```
-    public static void showInfoAlertDialog(UserLookDTO userLook, Activity activity, Bitmap bitmapFinal) {
-        new AlertDialog.Builder(activity)
-                .setTitle(R.string.information)
-                .setMessage(R.string.are_you_sure_you_like_the_look)
-                .setPositiveButton(android.R.string.ok, (dialog, which) -> {
-                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-                    bitmapFinal.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
-                    byte[] byteArray = byteArrayOutputStream.toByteArray();
-                    String spriteEncoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
-                    SharedPrefs.write("customized_sprite_" + SharedPrefs.read("login", ""), spriteEncoded);
+public static void showInfoAlertDialog(UserLookDTO userLook, Activity activity, Bitmap bitmapFinal) {
+    new AlertDialog.Builder(activity)
+        .setTitle(R.string.information)
+        .setMessage(R.string.are_you_sure_you_like_the_look)
+        .setPositiveButton(android.R.string.ok, (dialog, which) -> {
+            ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+            bitmapFinal.compress(Bitmap.CompressFormat.PNG, 100, byteArrayOutputStream);
+            byte[] byteArray = byteArrayOutputStream.toByteArray();
+            String spriteEncoded = Base64.encodeToString(byteArray, Base64.DEFAULT);
+            SharedPrefs.write("customized_sprite_" + SharedPrefs.read("login", ""), spriteEncoded);
 
-                    FirebaseDbDao firebaseDbDao = FirebaseDbDao.getInstance();
+            FirebaseDbDao firebaseDbDao = FirebaseDbDao.getInstance();
 
-                    firebaseDbDao.setUserSprite(SharedPrefs.read("user_id", ""), spriteEncoded, userLook);
-                    Intent intent = new Intent(activity, ActivityCredentialsLogin.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                    intent.putExtra("sprite_created", activity.getString(R.string.character_successfully_created_now_you));
-                    activity.startActivity(intent);
-                    activity.finish();
-                })
-                .setNegativeButton(android.R.string.cancel, (dialog, which) -> exitToMain(activity))
-                .setIcon(android.R.drawable.ic_dialog_info)
-                .setCancelable(false)
-                .show();
-    }
+            firebaseDbDao.setUserSprite(SharedPrefs.read("user_id", ""), spriteEncoded, userLook);
+            Intent intent = new Intent(activity, ActivityCredentialsLogin.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra("sprite_created", activity.getString(R.string.character_successfully_created_now_you));
+            activity.startActivity(intent);
+            activity.finish();
+        })
+        .setNegativeButton(android.R.string.cancel, (dialog, which) -> exitToMain(activity))
+        .setIcon(android.R.drawable.ic_dialog_info)
+        .setCancelable(false)
+        .show();
+}
 ```
 
 ### Screenshot
