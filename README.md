@@ -59,7 +59,7 @@ protected void onCreate(Bundle savedInstanceState) {
 ```
 
 ### Screenshot
-![Screenshot of a character creator](assets/images/character_creator_screenshot1.jpg)
+![Screenshot of a character creator](assets/images/character_creator_screenshot1_small.jpg)
 
 
 
