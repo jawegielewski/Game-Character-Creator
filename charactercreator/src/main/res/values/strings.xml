@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Character Creator</string>
+    <string name="arrow_next">Arrow next</string>
+    <string name="dress_your_character">Dress your character</string>
+    <string name="customize_your_character">Customize your character</string>
+    <string name="set_staticonnextpressed_first">Set staticOnNextPressed first</string>
+</resources>

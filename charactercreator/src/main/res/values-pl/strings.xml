@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kreator Postaci</string>
+    <string name="arrow_next">Strzałka dalej</string>
+    <string name="dress_your_character">Ubierz swoją postać</string>
+    <string name="customize_your_character">Spersonalizuj swoją postać</string>
+    <string name="set_staticonnextpressed_first">Najpierw ustaw staticOnNextPressed</string>
+</resources>
