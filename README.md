@@ -60,7 +60,9 @@ public static void showInfoAlertDialog(UserLookDTO userLookDto, Activity activit
 ```
 
 ### Screenshot
-![Screenshot of a character creator](assets/images/character_creator_screenshot1_small.jpg)
+
+![Screenshot of character creator](assets/images/character_creator_screenshot1_small.jpg)
+<img src="assets/images/character_creator_screenshot1_small.jpg" width="540" height="1200" alt="Screenshot of character creator">
 
 
 
