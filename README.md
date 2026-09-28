@@ -17,7 +17,7 @@ onNextPressed is required to be instantiated before start this Activity in order
 Starting this Activity could be like this - having defined IOnNextPressed:
 ```
 public interface IOnNextPressed {
-    void onPressed(UserLookDTO userLookDTO, Activity activity, Bitmap bitmapFinal);
+    void onPressed(UserLookDTO userLookDto, Activity activity, Bitmap bitmapFinal);
 }
 ```
 we can do the following:
@@ -32,7 +32,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 ```
-public static void showInfoAlertDialog(UserLookDTO userLook, Activity activity, Bitmap bitmapFinal) {
+public static void showInfoAlertDialog(UserLookDto userLookDto, Activity activity, Bitmap bitmapFinal) {
     new AlertDialog.Builder(activity)
         .setTitle(R.string.information)
         .setMessage(R.string.are_you_sure_you_like_the_look)
@@ -45,7 +45,7 @@ public static void showInfoAlertDialog(UserLookDTO userLook, Activity activity, 
 
             FirebaseDbDao firebaseDbDao = FirebaseDbDao.getInstance();
 
-            firebaseDbDao.setUserSprite(SharedPrefs.read("user_id", ""), spriteEncoded, userLook);
+            firebaseDbDao.setUserSprite(SharedPrefs.read("user_id", ""), spriteEncoded, userLookDto);
             Intent intent = new Intent(activity, ActivityCredentialsLogin.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("sprite_created", activity.getString(R.string.character_successfully_created_now_you));
