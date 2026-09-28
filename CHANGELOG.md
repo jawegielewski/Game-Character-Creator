@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2026-09-28
+
+### Added
+
+- updated Polish translation.
+
+
 ## 2026-09-27
 
 ### Added

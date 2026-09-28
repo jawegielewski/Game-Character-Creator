@@ -61,7 +61,7 @@ public static void showInfoAlertDialog(UserLookDTO userLookDto, Activity activit
 
 ### Screenshot
 
-<img src="assets/images/character_creator_screenshot1_small.jpg" width="40%" alt="Screenshot of character creator">
+<img src="assets/images/screenshot_1.jpg" width="40%" alt="Screenshot of character creator">
 
 
 
