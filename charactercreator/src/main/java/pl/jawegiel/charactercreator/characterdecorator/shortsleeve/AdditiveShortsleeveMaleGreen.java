@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator.shortsleeve;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
 public class AdditiveShortsleeveMaleGreen extends AdditiveShortsleeveMale {
@@ -13,8 +14,8 @@ public class AdditiveShortsleeveMaleGreen extends AdditiveShortsleeveMale {
     }
 
     @Override
-    public String getElementDescription() {
-        return "green";
+    public int getElementDescription() {
+        return R.string.green;
     }
 
     @Override

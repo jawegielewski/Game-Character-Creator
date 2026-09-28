@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator.shoes;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
 public class AdditiveShoesFemaleBrown extends AdditiveShoesFemale {
@@ -13,8 +14,8 @@ public class AdditiveShoesFemaleBrown extends AdditiveShoesFemale {
     }
 
     @Override
-    public String getElementDescription() {
-        return "brown";
+    public int getElementDescription() {
+        return R.string.brown;
     }
 
     @Override

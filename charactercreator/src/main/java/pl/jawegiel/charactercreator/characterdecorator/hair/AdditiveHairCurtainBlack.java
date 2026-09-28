@@ -2,23 +2,24 @@ package pl.jawegiel.charactercreator.characterdecorator.hair;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
-public class AdditiveHairCourtainBlond extends AdditiveHairCourtain {
+public class AdditiveHairCurtainBlack extends AdditiveHairCurtain {
 
-    public AdditiveHairCourtainBlond(Character baseCharacter) {
+    public AdditiveHairCurtainBlack(Character baseCharacter) {
         super(baseCharacter);
         this.baseCharacter = baseCharacter;
         this.context = baseCharacter.getContext();
     }
 
     @Override
-    public String getElementDescription() {
-        return "courtain blonde";
+    public int getElementDescription() {
+        return R.string.curtain_black;
     }
 
     @Override
     public int getColor() {
-        return Color.parseColor("#a6fdee87");
+        return Color.parseColor("#a6000000");
     }
 }

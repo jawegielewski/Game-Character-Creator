@@ -10,6 +10,8 @@ import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.util.Base64;
+
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.interfaces.IOnAdditiveAdded;
 import pl.jawegiel.charactercreator.interfaces.IOnCharacterChangeElement;
 import pl.jawegiel.charactercreator.utility.AppConstants;
@@ -117,7 +119,7 @@ public class BaseCharacter extends Character {
         canvas.drawBitmap(bitmapBase, new Matrix(), null);
 
         decorator.passLook(bitmap -> {
-            DecoratorItem decoratorItem = new DecoratorItem(decorator.getElementDescription(), bitmap, decorator.getColor());
+            DecoratorItem decoratorItem = new DecoratorItem(context.getString(decorator.getElementDescription()), bitmap, decorator.getColor());
             decorationsMap.put(decorator.getSpriteElement(), decoratorItem);
 
             if (!decorationsMap.isEmpty()) {
@@ -149,7 +151,7 @@ public class BaseCharacter extends Character {
             if (decorationsMap.get(spriteElement) != null)
                 return decorationsMap.get(spriteElement).getDescription();
         } else
-            return skin.getElementDescription();
+            return context.getString(skin.getElementDescription());;
 
         throw new RuntimeException("Cannot get decorator item description.");
     }
@@ -166,8 +168,8 @@ public class BaseCharacter extends Character {
     }
 
     @Override
-    public String getElementDescription() {
-        return "base";
+    public int getElementDescription() {
+        return R.string.base2;
     }
 
     @Override

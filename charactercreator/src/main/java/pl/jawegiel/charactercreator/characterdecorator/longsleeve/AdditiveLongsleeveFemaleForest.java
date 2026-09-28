@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator.longsleeve;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
 public class AdditiveLongsleeveFemaleForest extends AdditiveLongsleeveFemale {
@@ -13,8 +14,8 @@ public class AdditiveLongsleeveFemaleForest extends AdditiveLongsleeveFemale {
     }
 
     @Override
-    public String getElementDescription() {
-        return "forest";
+    public int getElementDescription() {
+        return R.string.forest;
     }
 
     @Override

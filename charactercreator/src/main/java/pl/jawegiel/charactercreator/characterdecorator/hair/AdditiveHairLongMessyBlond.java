@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator.hair;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
 public class AdditiveHairLongMessyBlond extends AdditiveHairLongMessy {
@@ -13,8 +14,8 @@ public class AdditiveHairLongMessyBlond extends AdditiveHairLongMessy {
     }
 
     @Override
-    public String getElementDescription() {
-        return "long messy blonde";
+    public int getElementDescription() {
+        return R.string.long_messy_blonde;
     }
 
 

@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator.shortsleeve;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
 public class AdditiveShortsleeveFemaleTan extends AdditiveShortsleeveFemale {
@@ -13,8 +14,8 @@ public class AdditiveShortsleeveFemaleTan extends AdditiveShortsleeveFemale {
     }
 
     @Override
-    public String getElementDescription() {
-        return "tan";
+    public int getElementDescription() {
+        return R.string.tan;
     }
 
     @Override

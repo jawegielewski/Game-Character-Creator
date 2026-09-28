@@ -83,6 +83,6 @@ public abstract class Character {
     }
 
     public abstract SpriteElement getSpriteElement();
-    public abstract String getElementDescription();
+    public abstract int getElementDescription();
     public abstract int getColor();
 }

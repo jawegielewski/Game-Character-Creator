@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator;
 
 import android.graphics.Bitmap;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.interfaces.IOnSpriteGet;
 
 public class AdditiveEmpty extends CharacterDecorator {
@@ -25,23 +26,23 @@ public class AdditiveEmpty extends CharacterDecorator {
     }
 
     @Override
-    public String getElementDescription() {
+    public int getElementDescription() {
         if (spriteElement == SpriteElement.HAIR)
-            return "no hair";
+            return R.string.no_hair;
         else if (spriteElement == SpriteElement.PANTS_MALE
                 || spriteElement == SpriteElement.PANTS_FEMALE)
-            return "no pants";
+            return R.string.no_pants;
         else if (spriteElement == SpriteElement.LONGSLEEVE_MALE
                 || spriteElement == SpriteElement.LONGSLEEVE_FEMALE)
-            return "no longsleeve";
+            return R.string.no_longsleeve;
         else if (spriteElement == SpriteElement.SHORTSLEEVE_MALE
                 || spriteElement == SpriteElement.SHORTSLEEVE_FEMALE)
-            return "no shortsleeve";
+            return R.string.no_shortsleeve;
         else if (spriteElement == SpriteElement.SHOES_MALE
                 || spriteElement == SpriteElement.SHOES_FEMALE)
-            return "no shoes";
+            return R.string.no_shoes;
         else
-            return "no ?";
+            return R.string.no_unknown;
     }
 
     @Override

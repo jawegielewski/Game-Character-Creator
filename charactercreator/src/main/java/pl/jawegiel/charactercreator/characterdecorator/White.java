@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.BitmapFactory;
 import android.util.Base64;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.interfaces.IOnSpriteGet;
 import pl.jawegiel.charactercreator.utility.AppConstants;
 
@@ -40,7 +41,7 @@ public class White extends CharacterDecorator {
     }
 
     @Override
-    public String getElementDescription() {
-        return "white";
+    public int getElementDescription() {
+        return R.string.white;
     }
 }

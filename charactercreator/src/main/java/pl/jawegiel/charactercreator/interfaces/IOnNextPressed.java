@@ -6,5 +6,5 @@ import android.graphics.Bitmap;
 import pl.jawegiel.charactercreator.model.UserLookDTO;
 
 public interface IOnNextPressed {
-    void onPressed(UserLookDTO userLookDTO, Activity activity, Bitmap bitmapFinal);
+    void onPressed(UserLookDTO userLookDto, Activity activity, Bitmap bitmapFinal);
 }

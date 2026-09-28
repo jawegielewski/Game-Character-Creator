@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator.pants;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
 public class AdditivePantsMaleBlack extends AdditivePantsMale {
@@ -13,8 +14,8 @@ public class AdditivePantsMaleBlack extends AdditivePantsMale {
     }
 
     @Override
-    public String getElementDescription() {
-        return "black";
+    public int getElementDescription() {
+        return R.string.black;
     }
 
     @Override

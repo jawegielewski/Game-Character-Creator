@@ -12,9 +12,9 @@ import pl.jawegiel.charactercreator.characterdecorator.Black;
 import pl.jawegiel.charactercreator.characterdecorator.CharacterDecorator;
 import pl.jawegiel.charactercreator.characterdecorator.SpriteElement;
 import pl.jawegiel.charactercreator.characterdecorator.White;
-import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCourtainBlack;
-import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCourtainBlond;
-import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCourtainBrown;
+import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCurtainBlack;
+import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCurtainBlond;
+import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCurtainBrown;
 import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCurlyLongBlack;
 import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCurlyLongBlond;
 import pl.jawegiel.charactercreator.characterdecorator.hair.AdditiveHairCurlyLongBrown;
@@ -217,9 +217,9 @@ public class Model implements Contract.IModel, Contract.IModel.IModelFieldsHolde
                 new AdditiveHairHighAndTightBlack(character),
                 new AdditiveHairHighAndTightBlond(character),
                 new AdditiveHairHighAndTightBrown(character),
-                new AdditiveHairCourtainBlack(character),
-                new AdditiveHairCourtainBlond(character),
-                new AdditiveHairCourtainBrown(character),
+                new AdditiveHairCurtainBlack(character),
+                new AdditiveHairCurtainBlond(character),
+                new AdditiveHairCurtainBrown(character),
                 new AdditiveHairLongMessyBlack(character),
                 new AdditiveHairLongMessyBlond(character),
                 new AdditiveHairLongMessyBrown(character),

@@ -9,9 +9,9 @@ import pl.jawegiel.charactercreator.characterdecorator.SpriteElement;
 import pl.jawegiel.charactercreator.interfaces.IOnSpriteGet;
 import pl.jawegiel.charactercreator.utility.AppConstants;
 
-public abstract class AdditiveHairCourtain extends CharacterDecorator {
+public abstract class AdditiveHairCurtain extends CharacterDecorator {
 
-    public AdditiveHairCourtain(Character baseCharacter) {
+    public AdditiveHairCurtain(Character baseCharacter) {
         this.baseCharacter = baseCharacter;
         this.context = baseCharacter.getContext();
     }

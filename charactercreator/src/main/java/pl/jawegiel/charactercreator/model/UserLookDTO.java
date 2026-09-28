@@ -8,21 +8,21 @@ public class UserLookDTO implements Serializable {
     public static final int NO_ELEMENT = 17170445;
 
     private String sex;
-    private String skinDesc;
+    private int skinDesc;
 
-    private String hairDesc;
+    private int hairDesc;
     private int hairColor = NO_ELEMENT;
 
-    private String pantsDesc;
+    private int pantsDesc;
     private int pantsColor = NO_ELEMENT;
 
-    private String longSleeveDesc;
+    private int longSleeveDesc;
     private int longSleeveColor = NO_ELEMENT;
 
-    private String shortSleeveDesc;
+    private int shortSleeveDesc;
     private int shortSleeveColor = NO_ELEMENT;
 
-    private String shoesDesc;
+    private int shoesDesc;
     private int shoesColor = NO_ELEMENT;
 
     public UserLookDTO() {
@@ -64,11 +64,11 @@ public class UserLookDTO implements Serializable {
         return sex;
     }
 
-    public String getSkinDesc() {
+    public int getSkinDesc() {
         return skinDesc;
     }
 
-    public String getHairDesc() {
+    public int getHairDesc() {
         return hairDesc;
     }
 
@@ -76,7 +76,7 @@ public class UserLookDTO implements Serializable {
         return hairColor;
     }
 
-    public String getPantsDesc() {
+    public int getPantsDesc() {
         return pantsDesc;
     }
 
@@ -84,7 +84,7 @@ public class UserLookDTO implements Serializable {
         return pantsColor;
     }
 
-    public String getLongSleeveDesc() {
+    public int getLongSleeveDesc() {
         return longSleeveDesc;
     }
 
@@ -92,7 +92,7 @@ public class UserLookDTO implements Serializable {
         return longSleeveColor;
     }
 
-    public String getShortSleeveDesc() {
+    public int getShortSleeveDesc() {
         return shortSleeveDesc;
     }
 
@@ -100,7 +100,7 @@ public class UserLookDTO implements Serializable {
         return shortSleeveColor;
     }
 
-    public String getShoesDesc() {
+    public int getShoesDesc() {
         return shoesDesc;
     }
 

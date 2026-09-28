@@ -2,6 +2,7 @@ package pl.jawegiel.charactercreator.characterdecorator.shortsleeve;
 
 import android.graphics.Color;
 
+import pl.jawegiel.charactercreator.R;
 import pl.jawegiel.charactercreator.characterdecorator.Character;
 
 public class AdditiveShortsleeveFemaleSlate extends AdditiveShortsleeveFemale {
@@ -13,8 +14,8 @@ public class AdditiveShortsleeveFemaleSlate extends AdditiveShortsleeveFemale {
     }
 
     @Override
-    public String getElementDescription() {
-        return "slate";
+    public int getElementDescription() {
+        return R.string.slate;
     }
 
     @Override
