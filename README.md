@@ -32,7 +32,7 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 ```
-public static void showInfoAlertDialog(UserLookDto userLookDto, Activity activity, Bitmap bitmapFinal) {
+public static void showInfoAlertDialog(UserLookDTO userLookDto, Activity activity, Bitmap bitmapFinal) {
     new AlertDialog.Builder(activity)
         .setTitle(R.string.information)
         .setMessage(R.string.are_you_sure_you_like_the_look)
